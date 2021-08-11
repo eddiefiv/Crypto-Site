@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Operation: Big Brains</title>
+        <meta name="viewport" content="with=device-width, inital-scale=1.0">
+        <link rel="icon" type="image/png" href="images/OBB.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <video playsinline autoplay muted loop class="back-video">
+            <source src="videos/BackVid.mp4" type="video/mp4">
+        </video>
+        <section class="main">
+            <nav>
+                <a href="index.html">
+                    <img src="images/OBB.png" class="obb-icon">
+                </a>
+                <a class="title" href ="index.html">Operation: Big Brains</a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bots.html">Bots</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                    </ul>
+                </div>                    
+            </nav>
+        
+        <div class="title-text">
+            <h1>Site Changelog</h1>
+        </div>
+        <div class="change">
+            <div class="change-tab">
+                <h1>Version 1.1.1</h1>
+                <p>- Added changelog<br>- Minor bug (spelling) fixes</p>
+            </div>
+            <div class="change-tab">
+                <h1>Version 1.1.2</h1>
+                <p>- Fixed up some code</p>
+            </div>
+            <div class="change-tab">
+                <h1>Version 1.2.0</h1>
+                <p>- Fixed the footer with easter egg buttons<br>- Added two easter eggs: Focus and Meditate<br>- Focus: Pauses background video<br>- Meditate: Doesn't do anything yet so don't try it</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var hasTranq = false;
+
+        $(document).ready(function() {
+            $(".fadeout-btn").click(function() {
+                if (!hasTranq) {
+                    $("section").fadeOut(2000);
+                    hasTranq = true;
+                }
+                else if (hasTranq) {
+                    $("section").fadeIn(2000);
+                    hasTranq = false;
+                }
+            });
+        });
+    </script>
+    </body>
+	
+</html>
